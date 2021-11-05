@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run changed-files
+        uses: tj-actions/changed-files
         id: changed-files
 
       - name: Show output
