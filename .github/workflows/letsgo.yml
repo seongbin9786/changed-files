@@ -1,0 +1,25 @@
+name: Participation Logger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  logging:
+    name: Logging another participation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to branch
+        uses: actions/checkout@v2
+
+      - name: Run changed-files
+        id: changed-files
+
+      - name: Show output
+        run: |
+          echo "${{ toJSON(steps.changed-files.outputs) }}"
+          echo "${{ github.repository }}"
+          echo "${{ github.event }}"
+          echo "${{ github.actor }}"
