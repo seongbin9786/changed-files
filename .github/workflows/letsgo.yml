@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout to branch
         uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
 
       - name: Run changed-files
         uses: tj-actions/changed-files@v1.2.0
