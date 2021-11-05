@@ -23,6 +23,11 @@ jobs:
       - name: Show output
         run: |
           echo "${{ toJSON(steps.changed-files.outputs) }}"
+          echo "${{ steps.changed-files.outputs }}"
           echo "${{ github.repository }}"
           echo "${{ github.event }}"
-          echo "${{ github.actor }}"
+          echo "${{ github.actor }}" 
+# { ... }
+# seongbin9786/changed-files
+# Object
+# seongbin9786
