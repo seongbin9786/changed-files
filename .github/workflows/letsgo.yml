@@ -25,9 +25,10 @@ jobs:
           echo "${{ toJSON(steps.changed-files.outputs) }}"
           echo "${{ steps.changed-files.outputs }}"
           echo "${{ github.repository }}"
-          echo "${{ github.event }}"
+          echo "${{ toJSON(github.event) }}"
           echo "${{ github.actor }}" 
 # { ... }
+# Object
 # seongbin9786/changed-files
 # Object
 # seongbin9786
